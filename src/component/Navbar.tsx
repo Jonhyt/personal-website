@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { colors } from "../assets/colors";
-import { BPLink } from "../navigation/Routes";
 
 interface MenuItem {
     link: string;
@@ -21,7 +20,7 @@ export const Navbar: React.FC = () => {
             {menu.map((item, i) => (
                 <Fragment key={"link" + i}>
                     <Spacer />
-                    <Link to={item.link}>{item.text}</Link>
+                    <StyledLink to={item.link}>{item.text}</StyledLink>
                 </Fragment>
             ))}
             <Spacer />

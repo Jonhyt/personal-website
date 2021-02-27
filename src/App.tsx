@@ -1,14 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { Navbar } from "./component/Navbar";
 import { Routes } from "./navigation/Routes";
 
 function App() {
     return (
-        <Router>
+        <BrowserRouter basename='/personal-website'>
             <Navbar />
             <Routes />
-        </Router>
+        </BrowserRouter>
     );
 }
 

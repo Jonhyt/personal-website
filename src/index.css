@@ -3,6 +3,8 @@ body,
 #root {
     height: 100%;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
@@ -15,4 +17,8 @@ body {
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+svg {
+    vertical-align: middle;
 }

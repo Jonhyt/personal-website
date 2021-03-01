@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { colors } from "../../assets/colors";
 import { PageContent } from "../../component/PageContent";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
+import { TranslatedText } from "../../component/TranslatedText";
 
 export const HomePage: React.FC = () => {
     return (
@@ -13,18 +14,19 @@ export const HomePage: React.FC = () => {
                     <ProfileTextContainer>
                         <div>
                             <Title>João Pinto</Title>
-                            <ProfileText>Full Stack Developer</ProfileText>
+                            <ProfileText>
+                                <TranslatedText id='profile.title' />
+                            </ProfileText>
                             <br />
                             <ProfileText>
-                                <CB>Hello</CB>, welcome to my little corner of the internet! I'm a <CB>full-stack developer</CB> with a kick for <CB>webdev</CB>{" "}
-                                and <CB>webdesign</CB>.
+                                <TranslatedText id='profile.text' bold={{ color: colors.brightMain, fontWeight: 600 }} />
                             </ProfileText>
                             <br />
                             <ProfileText>
                                 <CB>
                                     <AiOutlineMail />
                                 </CB>
-                                : jpinto@gmail.com
+                                : jpinto0017@gmail.com
                             </ProfileText>
                             <ProfileText>
                                 <CB>
@@ -44,7 +46,7 @@ const ProfileContainer = styled.div`
     display: flex;
     flex-direction: row;
     width: 800px;
-    background: ${colors.dark};
+    background: ${colors.mainGrey};
 `;
 
 const ProfileTextContainer = styled.div`
@@ -73,7 +75,7 @@ const Title = styled.p`
 const ProfileText = styled.p`
     font-size: 1.2em;
     margin: 0;
-    color: white;
+    color: ${colors.contrastGrey};
 `;
 
 const CB = styled.label`

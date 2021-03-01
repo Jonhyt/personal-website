@@ -1,37 +1,43 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { colors } from "../assets/colors";
+import { colors } from "../../assets/colors";
+import { TranslatedText } from "../TranslatedText";
+import { ChooseLanguage } from "./ChooseLanguage";
 
 interface MenuItem {
     link: string;
-    text: string;
+    id: string;
 }
 
 export const Navbar: React.FC = () => {
     const menu: MenuItem[] = [
-        { link: "/", text: "Who am I?" },
-        { link: "/what-i-do", text: "What I do?" },
-        { link: "/curriculum", text: "Curriculum" },
+        { link: "/", id: "nav.who" },
+        { link: "/what-i-do", id: "nav.what" },
+        { link: "/curriculum", id: "nav.cv" },
     ];
 
     return (
         <NavContainer>
-            <div style={{ flex: 1 }}>
+            <Left>
                 <JoPinto>
                     <label style={{ color: colors.brightMain }}>João</label> Pinto
                 </JoPinto>
-            </div>
-            <div style={{ display: "flex", flexDirection: "row" }}>
+            </Left>
+            <Middle>
                 {menu.map((item, i) => (
                     <Fragment key={"link" + i}>
                         <Spacer />
-                        <StyledLink to={item.link}>{item.text}</StyledLink>
+                        <StyledLink to={item.link}>
+                            <TranslatedText id={item.id} />
+                        </StyledLink>
                     </Fragment>
                 ))}
                 <Spacer />
-            </div>
-            <div style={{ flex: 1 }}></div>
+            </Middle>
+            <Right>
+                <ChooseLanguage />
+            </Right>
         </NavContainer>
     );
 };
@@ -43,12 +49,12 @@ const Spacer: React.FC = () => {
 const JoPinto = styled.label`
     font-size: 1.8em;
     font-weight: 600;
-    color: white;
+    color: ${colors.contrastGrey};
     padding-left: 35px;
 `;
 
 const NavContainer = styled.nav`
-    background-color: ${colors.dark};
+    background-color: ${colors.mainGrey};
     display: flex;
     height: 65px;
     justify-content: center;
@@ -57,7 +63,7 @@ const NavContainer = styled.nav`
 `;
 
 const StyledLink = styled(Link)`
-    color: white;
+    color: ${colors.contrastGrey};
     text-decoration: none;
     height: 100%;
     display: flex;
@@ -73,6 +79,21 @@ const StyledLink = styled(Link)`
 `;
 
 const SpacerContainer = styled.label`
-    color: white;
+    color: ${colors.contrastGrey};
     font-size: 1.5em;
+`;
+
+const Left = styled.div`
+    flex: 1;
+`;
+
+const Middle = styled.div`
+    display: flex;
+    flexdirection: row;
+`;
+
+const Right = styled.div`
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
 `;

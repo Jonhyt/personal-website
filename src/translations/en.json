@@ -2,7 +2,13 @@
     "nav.who": "Who am I?",
     "nav.what": "What I do?",
     "nav.cv": "Curriculum",
+
+    "general.photosource": "Photo by",
     
     "profile.title": "Full Stack Developer",
-    "profile.text": "*Hello*, welcome to my little corner of the internet! I'm a *full-stack developer* with a kick for *webdev* and *webdesign*."
+    "profile.text": "*Hello*, welcome to my little corner of the internet! I'm a *full-stack developer* with a kick for *webdev* and *webdesign*.",
+    "profile.about.title": "About me",
+    "profile.about.text": " I have had a lot of interests through life, but now my fascination with technology has taken center stage, leading me to a degree in computer engineering where programing became my favorite subject. A life long passion of drawing and art in general also lead me to learn as much as I can about creating professional looking, intuitive UIs that feel good to see and use. I am a generally reserved person, though I do enjoy teaching others what I know, a skill many of my colleagues in college appreciated. I am very adaptable, capable of learning new techniques and programming languages relatively quickly.",
+    "profile.edu.title": "Education",
+    "profile.edu.text": " I enrolled into the *Instituto Politécnico de Tomar* in 2015, from which I graduated in 2020 with a* Batchelor's Degree in Computer Engineering*. There I learned the basics of programming, network infrastruture, computer architecture, mathematics and eletronics. My final project involved the creation of a mobile app aiming at running a on-foot version of Rally Paper."
 }

@@ -2,7 +2,13 @@
     "nav.who": "Quem eu sou?",
     "nav.what": "O que eu faço?",
     "nav.cv": "Currículo",
+
+    "general.photosource": "Foto por",
     
     "profile.title": "Desenvolvedor Full-Stack",
-    "profile.text": "*Olá*, bem vindo ao meu cantinho da internet! Eu sou um *desenvolvedor full-stack* com um fascínio por *webdev* e *webdesign*."
+    "profile.text": "*Olá*, bem vindo ao meu cantinho da internet! Eu sou um *desenvolvedor full-stack* com um fascínio por *webdev* e *webdesign*.",
+    "profile.about.title": "Sobre mim",
+    "profile.about.text": "Eu tive muito interesses pela minha vida, mas agora o meu fascínio com tecnologia tem vindo a tomar um lugar central na minha vida, levando-me a tirar um curso em engenharia informática, onde Programação se tornou o meu tópico favorito. Uma paixão por desenho e arte em geral também me levou a aprender tanto quanto pode sobre como criar UIs com aspeto profissional, e sejam não só agradáveis ao ver, mas também ao usar. Eu sou geralmente uma pessoa reservada, embora goste de ensinar a outros sobre coisas que aprendi, uma habilidade que os meus colegas na universidade sempre apreciaram. Eu sou muito adaptável, capaz de aprender novas técnicas e línguas de programação relativamente rápido.",
+    "profile.edu.title": "Educação",
+    "profile.edu.text": "Eu entrei no *Instituto Politécnico de Tomar* em 2015, da qual me licenciei em 2020 com uma *Licenciatura em Engenharia Informática*. Lá aprendi as bases de programação, infraestrutura de redes, arquitetura de computadores, matemática e circuitos eletrónicos. O meu projeto final envolveu a criação de uma aplicação móvel com o objetivo de correr peddy-papers."
 }

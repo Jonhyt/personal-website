@@ -60,6 +60,7 @@ const NavContainer = styled.nav`
     justify-content: center;
     align-items: center;
     box-shadow: rgb(0 0 0 / 45%) 0px 5px 15px;
+    padding: 20px 0;
 `;
 
 const StyledLink = styled(Link)`

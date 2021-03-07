@@ -1,9 +1,23 @@
 import React from "react";
-import styled from "styled-components";
 import { colors } from "../../assets/colors";
 import { PageContent } from "../../component/PageContent";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { TranslatedText } from "../../component/TranslatedText";
+import {
+    AboutContainer,
+    BlockContainer,
+    CB,
+    CenitImage,
+    CenterContainer,
+    BlackContainer,
+    IPTImage,
+    ProfileContainer,
+    ProfileText,
+    ProfileTextContainer,
+    Title,
+    WhoText,
+    WhiteContainer,
+} from "./HomeStyles";
 
 export const HomePage: React.FC = () => {
     return (
@@ -37,48 +51,49 @@ export const HomePage: React.FC = () => {
                         </div>
                     </ProfileTextContainer>
                 </ProfileContainer>
+                <WhoText>
+                    <BlockContainer style={{ flexDirection: "column", justifyContent: "center" }}>
+                        <AboutContainer>
+                            <h2>
+                                <TranslatedText id='profile.about.title' />
+                            </h2>
+                            <p>
+                                <TranslatedText id='profile.about.text' />
+                            </p>
+                        </AboutContainer>
+                    </BlockContainer>
+                    <BlockContainer>
+                        <BlackContainer>
+                            <h2>
+                                <TranslatedText id='profile.edu.title' />
+                            </h2>
+                            <p>
+                                <TranslatedText id='profile.edu.text' bold={{ color: colors.brightMain, fontWeight: 600 }} />
+                            </p>
+                        </BlackContainer>
+                        <div>
+                            <IPTImage>
+                                <label>
+                                    <TranslatedText id='general.photosource' />: mediatejo.net
+                                </label>
+                            </IPTImage>
+                        </div>
+                    </BlockContainer>
+                    {/* <BlockContainer>
+                        <div>
+                            <CenitImage>
+                                <label>Photo by: otemplario.pt</label>
+                            </CenitImage>
+                        </div>
+                        <WhiteContainer>
+                            <h2>Softinsa</h2>
+                            <p>
+                                I started working for <CB>Softinsa</CB>
+                            </p>
+                        </WhiteContainer>
+                    </BlockContainer> */}
+                </WhoText>
             </CenterContainer>
         </PageContent>
     );
 };
-
-const ProfileContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    width: 800px;
-    background: ${colors.mainGrey};
-`;
-
-const ProfileTextContainer = styled.div`
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin-left: 50px;
-    margin-right: 50px;
-    display: flex;
-    justify-content: center;
-`;
-
-const CenterContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-`;
-
-const Title = styled.p`
-    font-size: 3em;
-    margin: 0;
-    font-weight: 600;
-    color: ${colors.brightMain};
-`;
-
-const ProfileText = styled.p`
-    font-size: 1.2em;
-    margin: 0;
-    color: ${colors.contrastGrey};
-`;
-
-const CB = styled.label`
-    color: ${colors.brightMain};
-    font-weight: 600;
-`;
